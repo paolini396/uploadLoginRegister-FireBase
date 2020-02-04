@@ -82,7 +82,7 @@ export default class Login extends Component{
         />
 
         <TextInput onChangeText ={ (senha) => { this.setState({senha})}} 
-        secureTextEntry={false} 
+        secureTextEntry={true} 
         underlineColorAndroid="transparent" 
         style={styles.input} placeholder="Senha..." 
         />

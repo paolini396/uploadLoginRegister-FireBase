@@ -59,24 +59,26 @@ export default class Cadastrar extends Component{
       <View style={styles.container}>
         
         <Text style={styles.cadastrar}>Cadastro</Text>
-        <TextInput onChangeText ={ (email) => {this.setState({email}) }} underlineColorAndroid="transparent" 
-        style={styles.input} placeholder="Email...*"
-        />
-
-         <TextInput onChangeText ={ (nome) => {this.setState({nome}) }} underlineColorAndroid="transparent" 
-        style={styles.input} placeholder="Nome...*"
-        />
-        
-        
-        <TextInput onChangeText ={ (senha) => { this.setState({senha})}} secureTextEntry={false} 
-        underlineColorAndroid="transparent" style={styles.input} placeholder="Senha...*"   
-        />
-        
-        <TouchableOpacity onPress={this.cadastrar} style={styles.botao} >
-          <Text style={styles.textbnt} > Cadastrar </Text>
-        </TouchableOpacity>
 
         
+          <TextInput onChangeText ={ (email) => {this.setState({email}) }} underlineColorAndroid="transparent" 
+          style={styles.input} placeholder="Email...*"
+          />
+
+          <TextInput onChangeText ={ (nome) => {this.setState({nome}) }} underlineColorAndroid="transparent" 
+          style={styles.input} placeholder="Nome...*"
+          />
+          
+          
+          <TextInput onChangeText ={ (senha) => { this.setState({senha})}} secureTextEntry={true} 
+          underlineColorAndroid="transparent" style={styles.input} placeholder="Senha...*"   
+          />
+          
+          <TouchableOpacity onPress={this.cadastrar} style={styles.botao} >
+            <Text style={styles.textbnt} > Cadastrar </Text>
+          </TouchableOpacity>
+
+      
         
       </View>
     );
@@ -89,7 +91,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#1C1C1C'
+    backgroundColor: '#1C1C1C',
+    
   },
   input: {
     width: 350,
@@ -125,7 +128,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
     
-  }
+  },
   
 
 })
